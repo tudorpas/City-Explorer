@@ -1,19 +1,19 @@
-import styles from "./navbar.module.css"
+import "./globals.css"
 
 export default function Navbar(){
     return(
-        <div className={styles.container}>
+        <div className="container">
       <p>
-        <a href="/homepage" className={styles.button}>Homepage</a>
+        <a href="/homepage" className="button" >Homepage</a>
       </p>
       <p>
-        <a href="/search" className={styles.button}>Search</a>
+        <a href="/search" className="button">Search</a>
       </p>
       <p>
-        <a href="/citypage" className={styles.button}>Citypage</a>
+        <a href="/citypage" className="button">Citypage</a>
       </p>
       <p>
-        <a href="/favorites" className={styles.button}>Favorites</a>
+        <a href="/favorites" className="button">Favorites</a>
       </p>
     </div>
     )

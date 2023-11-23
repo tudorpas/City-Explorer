@@ -1,11 +1,11 @@
-import styles from "./favorites.module.css"
+import "../globals.css"
 
 export default function Favorites(){
     return(
         <div>
             <h1>Favorites</h1>
             <p>
-                <a href="/" className={styles.button}>Back</a>
+                <a href="/" className="button">Back</a>
             </p>
         </div>
     )
