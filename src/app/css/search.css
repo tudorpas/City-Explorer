@@ -1,0 +1,24 @@
+
+.h1{
+    font-size: 2rem;
+}
+
+.text-input{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.container-search{
+    margin-top: 2rem;
+}
+
+.search-button{
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+
+.search-button > img{
+    height: 1.6rem;
+}

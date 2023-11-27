@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #797979;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+}
+.button{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.container > p{
+    height: 3rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

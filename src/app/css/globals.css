@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    background-color: #181A1B;
+    color: aliceblue;
+}
+
+.center-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.center-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+

@@ -1,10 +1,11 @@
-import "./globals.css"
+import "../css/globals.css"
+import "../css/navbar.css"
 
 export default function Navbar(){
     return(
         <div className="container">
       <p>
-        <a href="/homepage" className="button" >Homepage</a>
+        <a href="/" className="button" >Home</a>
       </p>
       <p>
         <a href="/search" className="button">Search</a>
