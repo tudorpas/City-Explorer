@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 1px solid #797979;
+    border-bottom: 1px solid #CBB734;
     padding: 0.7rem 0.5rem 0.7rem 0.5rem;
 }
 .button{
@@ -12,10 +12,15 @@
     font-size: 1.5rem;
 }
 
-.container > p{
+.container > p{ 
     height: 3rem;
     width: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+img{
+    height: 8rem;
+    display: inline-block   ;
 }

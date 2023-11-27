@@ -1,0 +1,15 @@
+.results-container{
+    margin-top: 6rem;
+    display: grid;
+    column-gap: 5rem;
+    row-gap: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.result{
+    height: 20rem;
+    width: 15rem;
+    border-color: #CBB734;
+    border-style: solid;
+    border-width: 1px;
+}       
