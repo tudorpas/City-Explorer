@@ -10,17 +10,28 @@
     color:aliceblue;
     text-decoration: none;
     font-size: 1.5rem;
+    width: 10rem;
+    height: 6rem;
+    transition: 0.3s;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .container > p{ 
-    height: 3rem;
-    width: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.button:hover{
+    transition: 0.3s;
+    background-color: #2e2e1e;
 }
 
 img{
     height: 8rem;
     display: inline-block   ;
 }
+

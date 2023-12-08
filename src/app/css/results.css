@@ -11,5 +11,61 @@
     width: 15rem;
     border-color: #CBB734;
     border-style: solid;
+    border-radius: 5px;
     border-width: 1px;
+
 }       
+
+.city-info{
+    margin: 0.5rem;
+    max-height: 15rem;
+}
+
+.city-country{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 1.6rem;
+    margin: 0.6rem;
+}
+
+.city-country > button > img{
+    height: 1rem;
+    cursor: pointer; 
+}
+
+.city-country > button{
+    height: 1.5rem;
+    background-color: #181A1B;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+.city-country > button:hover{
+    background-color: white;
+    border: solid 1px white;
+}
+
+.results-page-container{
+    display: flex;
+}
+
+
+.message.hidden {
+    transform: scale(0);
+}
+
+.message {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #CBB734;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding:0.3rem 0.5rem 0.3rem 0.5rem;
+    opacity: 95%;
+    display: block;
+    transform: scale(1); /* Initial scale, fully visible */
+    transition: transform 0.3s ease; /* Smooth transition over 0.3 seconds with ease-out timing function */
+  }
+  

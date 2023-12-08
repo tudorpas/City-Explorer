@@ -6,13 +6,13 @@ export default function Navbar(){
       <>
         <div className="container">
           <img src="../icons/logo-large.png"></img>
-          <p>
+          <p className="p-container">
             <a href="/" className="button" >Home</a>
           </p>
-          <p>
+          <p className="p-container">
             <a href="/search" className="button">Search</a>
           </p>
-          <p>
+          <p className="p-container">
             <a href="/favorites" className="button">Favorites</a>
           </p>
           

@@ -5,7 +5,9 @@
 
 .text-input{
     font-size: 1.5rem;
+    border-style: none;
     border-radius: 0.5rem;
+    
 }
 
 .container-search{
@@ -14,11 +16,18 @@
 
 .search-button{
     margin-left: 0.5rem;
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
     border-radius: 0.5rem;
     border-style: none;
+    transition: 0.15s;
 }
 
+
 .search-button > img{
-    height: 1.6rem;
+    height: 1.3rem;
+}
+
+.search-button:hover{
+    background-color: #292921;
+    transition: 0.15s;
 }
