@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
 
@@ -15,9 +15,9 @@ export default function Favorites() {
     const updatedCities = savedCities.filter((city) => city.id !== cityId);
     setSavedCities(updatedCities);
     localStorage.setItem("savedCities", JSON.stringify(updatedCities));
-    setClassName("showed")
+    setClassName("showed");
     setTimeout(() => setClassName("hidden"), 3000);
-  }
+  };
 
   return (
     <div>
@@ -27,31 +27,39 @@ export default function Favorites() {
       </div>
       <div className="favorites-page-container">
         <div className="favorites-container">
-          {savedCities?.slice().reverse().map((city) => (
-            <div className="result" key={city.id}>
-              <div className="city-country">
-                <p>{city.country}</p>
-                <button onClick={() => handleDelete(city.id)} className="delete-button">
-                  <img src='../trash-can-solid.svg'></img>
-                </button>
-              </div>
-              <div className="city-info center-column">
-                <h2>{city.name}</h2>
-                <div className="city-info">
-                  <p>Latitude: {city.latitude}</p>
-                  <p>Longitude: {city.longitude}</p>
-                  <p>Time Zone: {city.timezone}</p>
+          {savedCities
+            ?.slice()
+            .reverse()
+            .map((city) => (
+              <div className="result" key={city.id}>
+                <div className="city-country">
+                  <p>{city.country}</p>
+                  <button
+                    onClick={() => handleDelete(city.id)}
+                    className="delete-button"
+                  >
+                    <img src="../trash-can-solid.svg"></img>
+                  </button>
                 </div>
-                <div>
-                  <a className="more-button" href={`/favorites/${city.id}`}>More</a>
+                <div className="city-info center-column">
+                  <h2>{city.name}</h2>
+                  <div className="city-info">
+                    <p>Latitude: {city.latitude}</p>
+                    <p>Longitude: {city.longitude}</p>
+                    <p>Time Zone: {city.timezone}</p>
+                  </div>
+                  <div>
+                    <a className="more-button" href={`/favorites/${city.id}`}>
+                      More
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
         <div className={`messagedel ${className}`}>
-                  <p>Removed from Favorites</p>
-            </div>
+          <p>Removed from Favorites</p>
+        </div>
       </div>
     </div>
   );

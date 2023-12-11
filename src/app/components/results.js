@@ -1,56 +1,50 @@
-import '../css/search.css'
-import { useState, useEffect } from "react"
+import "../css/search.css";
+import { useState, useEffect } from "react";
 
+export default function Result({ props }) {
+  const [className, setClassName] = useState("hidden");
+  const [savedCities, setSavedCities] = useState([]);
 
+  useEffect(() => {
+    const localStorageData = JSON.parse(localStorage.getItem("savedCities"));
+    setSavedCities(localStorageData || []);
+  }, []);
 
-export default function Result( {props} ){
-        const [className, setClassName] = useState("hidden");
-        const [savedCities, setSavedCities] = useState([]);
+  const handleSubmit = async (city) => {
+    const updatedCities = [...savedCities, city];
 
-        useEffect(() => {
-            const localStorageData = JSON.parse(localStorage.getItem('savedCities'));
-            setSavedCities(localStorageData || []);
-          }, []);
+    setSavedCities(updatedCities);
+    localStorage.setItem("savedCities", JSON.stringify(updatedCities));
 
-        const handleSubmit = async (city) =>{
-            const updatedCities = [...savedCities, city];
+    setClassName("showed");
+    setTimeout(() => setClassName("hidden"), 3000);
+  };
 
-            setSavedCities(updatedCities);
-            localStorage.setItem("savedCities", JSON.stringify(updatedCities));
-    
-            setClassName("showed");
-            setTimeout(() => setClassName('hidden'), 3000);
-            
-    }
-
-    return(
-        <div className="results-page-container">
-            <div className="results-container">
-
-                        {  
-                            props?.map(city => (
-                                <div className="result" key={city.id}>
-                                    <div className="city-country">
-                                        <button onClick={() => handleSubmit(city)}>
-                                            <img src="star-regular.svg" />
-                                        </button>
-                                        <p>{city.country}</p>
-                                    </div>
-                                    <div className="city-info center-column">
-                                        <h2>{city.name}</h2>
-                                        <div className="city-info">
-                                            <p>Latitude: {city.latitude}</p>
-                                            <p>Longitude: {city.longitude}</p>                                                                                                              
-                                            <p>Time Zone: {city.timezone}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
-                        }   
-                    </div>
-            <div className={`message ${className}`}>
-                    <p>Added to Favorites</p>
+  return (
+    <div className="results-page-container">
+      <div className="results-container">
+        {props?.map((city) => (
+          <div className="result" key={city.id}>
+            <div className="city-country">
+              <button onClick={() => handleSubmit(city)}>
+                <img src="star-regular.svg" />
+              </button>
+              <p>{city.country}</p>
             </div>
-        </div>
-    )
+            <div className="city-info center-column">
+              <h2>{city.name}</h2>
+              <div className="city-info">
+                <p>Latitude: {city.latitude}</p>
+                <p>Longitude: {city.longitude}</p>
+                <p>Time Zone: {city.timezone}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={`message ${className}`}>
+        <p>Added to Favorites</p>
+      </div>
+    </div>
+  );
 }
