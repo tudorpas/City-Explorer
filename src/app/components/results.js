@@ -15,11 +15,9 @@ export default function Result( {props} ){
         const handleSubmit = async (city) =>{
             const updatedCities = [...savedCities, city];
 
-            // Update state and local storage
             setSavedCities(updatedCities);
             localStorage.setItem("savedCities", JSON.stringify(updatedCities));
     
-            // Show the message
             setClassName("showed");
             setTimeout(() => setClassName('hidden'), 3000);
             
