@@ -4,6 +4,8 @@ import './css/search.css'
 import './css/favorites.css'
 import './css/results.css'
 import './css/navbar.css'
+import './css/id.css'
+import './css/home.css'
 
 const rubik = Rubik({ subsets: ['latin'] })
 

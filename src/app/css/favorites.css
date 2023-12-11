@@ -16,3 +16,46 @@
     display: flex;
     justify-content: center;
 }
+
+.delete-button{
+    padding-top: 2px;
+    transition: 0.2s;
+}
+.delete-button:hover{
+    transition: 0.2s;
+}
+
+
+.messagedel.hidden {
+    transform: scale(0);
+}
+
+.messagedel {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(156, 38, 38);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding:0.3rem 0.5rem 0.3rem 0.5rem;
+    opacity: 95%;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.more-button{
+    color: #CBB734;
+    border: 1px solid aliceblue;
+    background-color: #2e2e1e;
+    border-radius: 5px;
+    transition: 0.2s;
+    padding:0.1rem 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.more-button:hover{
+    transition: 0.2s;
+    background-color: rgb(145, 139, 68);
+}
